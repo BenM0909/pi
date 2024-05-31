@@ -46,6 +46,14 @@ class Parser(Parser):
                 end = arg2[4:].strip('"')
         for arg in args:
             if not(arg.startswith("sep =") or arg.startswith("sep=") or arg.startswith("end =") or arg.startswith("end=")):
+                if matches := re.search(r"(_(.+))", arg):
+                    if str(matches.group(1))[1:] in vars:
+                        if vars[str(matches.group(1))[1:]]:
+    
+                            arg = arg.replace(
+                                matches.group(1),
+                                vars[str(matches.group(1)).strip()[1:]],
+                            )
                 value = f"{value}{sep.strip()}{arg}"
         value = f"{value}{end}"
         print(value, sep = "", end = "")
@@ -254,6 +262,10 @@ class Parser(Parser):
                                 matches.group(1),
                                 vars[str(matches.group(2))],
                             )
+                    if re.search(r".+\(.+\)", args[arg]):
+                        if args[arg].upper().split("(")[0] in Lexer.tokens:
+                            value = parse_args(str(args[arg]))
+                            args[arg] = value
                     vars[func["args"][arg]] = args[arg]
                 for line in func["lines"]:
                     if in_func:
