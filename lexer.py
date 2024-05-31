@@ -11,68 +11,68 @@ class Lexer(Lexer):
     
     literals = { '=' }
     # Regular expression rules for tokens
-    SHOW = r'show\(.+\)'
+    SHOW = r'show\(.+\)+'
     
-    MATH = r'math\([\d\.]+\s+?[\+|\-|\*|/|\%]\s+?[\d\.]+\)'
+    MATH = r'math\([\d\.]+\s+?[\+|\-|\*|/|\%]\s+?[\d\.]+\)+'
     
-    VCUBE = r'vcube\([\d\.]+\)'
+    VCUBE = r'vcube\([\d\.]+\)+'
     
-    VRECTPR = r'vrectpr\([\d\.]+,\s+?[\d\.]+,\s+?[\d\.]+\)'
+    VRECTPR = r'vrectpr\([\d\.]+,\s+?[\d\.]+,\s+?[\d\.]+\)+'
     
-    SARECTPR = r'sarectpr\([\d\.]+,\s+?[\d\.]+,\s+?[\d\.]+\)'
+    SARECTPR = r'sarectpr\([\d\.]+,\s+?[\d\.]+,\s+?[\d\.]+\)+'
     
-    ARECT = r'arect\([\d\.]+,\s+?[\d\.]+\)'
+    ARECT = r'arect\([\d\.]+,\s+?[\d\.]+\)+'
     
-    CIRCIRCLE = r'circircle\([\d\.]+\)'
+    CIRCIRCLE = r'circircle\([\d\.]+\)+'
     
-    ACIRCLE = r'acircle\([\d\.]+\)'
+    ACIRCLE = r'acircle\([\d\.]+\)+'
     
-    VCYL = r'vcyl\([\d\.]+,\s+?[\d\.]+\)'
+    VCYL = r'vcyl\([\d\.]+,\s+?[\d\.]+\)+'
     
-    SACYL = r'sacyl\([\d\.]+,\s+?[\d\.]+\)'
+    SACYL = r'sacyl\([\d\.]+,\s+?[\d\.]+\)+'
     
-    VCONE = r'vcone\([\d\.]+,\s+?[\d\.]+\)'
+    VCONE = r'vcone\([\d\.]+,\s+?[\d\.]+\)+'
     
-    SACONE = r'sacone\([\d\.]+,\s+?[\d\.]+\)'
+    SACONE = r'sacone\([\d\.]+,\s+?[\d\.]+\)+'
     
-    FRADIUS = r'fradius\([\d\.]+\)'
+    FRADIUS = r'fradius\([\d\.]+\)+'
     
-    VSPH = r'vsph\([\d\.]+\)'
+    VSPH = r'vsph\([\d\.]+\)+'
     
-    BINARY = r'binary\(.+\)'
+    BINARY = r'binary\(.+\)+'
     
-    CHARACTER = r'character\([\d\.]+\)'
+    CHARACTER = r'character\([\d\.]+\)+'
     
-    LENGTH = r'length\(.+?\)'
+    LENGTH = r'length\(.+?\)+'
     
-    ORDINAL = r'ordinal\(.+?\)'
+    ORDINAL = r'ordinal\(.+?\)+'
     
-    POWER = r'power\([\d\.]+,\s+?[\d\.]+\)'
+    POWER = r'power\([\d\.]+,\s+?[\d\.]+\)+'
 
-    SASPH = r'sasph\((?:[\d\.])+\)'
+    SASPH = r'sasph\((?:[\d\.])+\)+'
 
-    SACUBE = r'sacube\([\d\.]+\)'
+    SACUBE = r'sacube\([\d\.]+\)+'
 
-    BEN = r'ben\(.+?\)'
+    BEN = r'ben\(.+?\)+'
     
-    VAR = r'var\([\w\d\.]+\s+?=\s+?.*\)'
+    VAR = r'var\([\w\d\.]+\s+?=\s+?.*\)+'
 
     IF = r'if ?.* ?[:!<>= ]= ?.* ?'
 
     ELSE = r'else'
 
-    ROUND = r'round\([\d|\.]+,\s+?(\d|\.)+\)'
+    ROUND = r'round\([\d|\.]+,\s+?(\d|\.)+\)+'
 
-    INPUT = r'input\(.+?\)'
+    INPUT = r'input\(.+?\)+'
 
     ELIF = r'elif ?.* ?[:!<>= ]= ?.* ?'
 
-    RANDOMINT = r'randomint\(.+,\s+.+\)'
+    RANDOMINT = r'randomint\(.+,\s+.+\)+'
 
     ENDIF = r'endif'
 
-    FUNC = r'func\(.+?\)'
+    FUNC = r'func\(.+?\)+'
 
     ENDFUNC = r'endfunc'
 
-    CALL = r'call\(.+?\)'
+    CALL = r'call\(.+?\)+'
